@@ -1,13 +1,4 @@
-window.addEventListener("DOMContentLoaded", (event) => {
-  // Get the last known count from localStorage (default to 0 if not found)
-  let lastCount = localStorage.getItem("visitCount") || "Loading...";
-  document.getElementById("counter").innerText = lastCount;
-
-  // Fetch the latest count from the Azure Function
-  getVisitCount();
-});
-
-const functionApi = process.env.apikey;
+const functionApi = process.env.API_KEY;
 
 const getVisitCount = () => {
   fetch(functionApi)
@@ -26,4 +17,13 @@ const getVisitCount = () => {
     .catch((error) => {
       console.error("Error occurred:", error);
     });
-};
+}
+
+window.addEventListener("DOMContentLoaded", (event) => {
+  // Get the last known count from localStorage (default to 0 if not found)
+  let lastCount = localStorage.getItem("visitCount") || "Loading...";
+  document.getElementById("counter").innerText = lastCount;
+
+  // Fetch the latest count from the Azure Function
+  getVisitCount();
+})
