@@ -32,8 +32,6 @@ jobs:
           api_location: "" # Api source code path - optional
           output_location: "." # Built app content directory - optional
           ###### End of Repository/Build Configurations ######
-        env: # Add environment variables here
-          API_KEY: https://resumevisitorcountersa.azurewebsites.net.azurewebsites.net/api/Request?code=1umB3ACT3Md9pV6JDqGCBqoEp9UN5toVu5k6i1zC5sNSAzFuAhkEDQ==
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'

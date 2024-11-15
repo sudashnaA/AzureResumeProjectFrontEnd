@@ -1,4 +1,4 @@
-const functionApi = "https://resumevisitorcountersa.azurewebsites.net/api/Request?code=1umB3ACT3Md9pV6JDqGCBqoEp9UN5toVu5k6i1zC5sNSAzFuAhkEDQ==";
+const functionApi = "https://resumevisitorcountersa.azurewebsites.net/api/Visitors/list?";
 
 window.addEventListener("DOMContentLoaded", (event) => {
   // Get the last known count from localStorage (default to 0 if not found)
