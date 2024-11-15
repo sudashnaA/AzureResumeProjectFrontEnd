@@ -27,5 +27,3 @@ const getVisitCount = () => {
       console.error("Error occurred:", error);
     });
 };
-
-getVisitCount();
