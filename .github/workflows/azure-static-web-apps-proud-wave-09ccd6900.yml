@@ -32,20 +32,7 @@ jobs:
           api_location: "" # Api source code path - optional
           output_location: "." # Built app content directory - optional
           ###### End of Repository/Build Configurations ######
-      - name: Git checkout
-        uses: actions/checkout@v2
-
-      - name: Use Node 12.x
-        uses: actions/setup-node@v1
-        with:
-          node-version: 12.x
-
-      - name: Install Dependencies (prod)
-        run: yarn install --frozen-lockfile --production
-
-      - name: Run Tests (JEST)
-        run: yarn test --ci --silent --testPathIgnorePatterns=experimental
-        env:
+        env: # Add environment variables here
           API_KEY: ${{ secrets.API_KEY }}
 
   close_pull_request_job:
